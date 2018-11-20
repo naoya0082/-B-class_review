@@ -5,7 +5,7 @@ class Customer:
         self.age = age
 
     def full_name(self):
-        print(f"{self.first_name} {self.family_name}")
+        return f"{self.first_name} {self.family_name}"
 
     def entry_fee(self):
         if self.age < 20:
@@ -14,8 +14,11 @@ class Customer:
             self.entry_fee = 1500
         else:
             self.entry_fee = 1200
-        print(self.entry_fee)
 
+        return self.entry_fee
+
+    def info_csv(self):
+        print(f"{self.full_name()}, {self.age}, {self.entry_fee()}")
 
 if __name__ == "__main__":
     ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
