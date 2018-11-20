@@ -7,6 +7,16 @@ class Customer:
     def full_name(self):
         print(f"{self.first_name} {self.family_name}")
 
+    def entry_fee(self):
+        if self.age < 20:
+            self.entry_fee = 1000
+        elif self.age >= 20 and self.age < 65:
+            self.entry_fee = 1500
+        else:
+            self.entry_fee = 1200
+        print(self.entry_fee)
+
+
 if __name__ == "__main__":
     ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
     ken.full_name()  # "Ken Tanaka" という値を返す
